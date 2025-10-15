@@ -110,19 +110,6 @@ async function loadSubjects()
     }
 }
 
-async function loadSubjects()
-{
-    try
-    {
-        const subjects = await subjectsAPI.fetchAll();
-        renderSubjectTable(subjects);
-    }
-    catch (err)
-    {
-        console.error('Error cargando materias:', err.message);
-    }
-}
-
 function renderSubjectTable(subjects)
 {
     const tbody = document.getElementById('subjectTableBody');

@@ -30,7 +30,7 @@ function handleGet($conn)
         $total = getTotalSubjets($conn);
 
         echo json_encode([
-            'subjets' => $subjets, // ya es array
+            'subjets' => $subjet, // ya es array
             'total' => $total        // ya es entero
         ]);
     }

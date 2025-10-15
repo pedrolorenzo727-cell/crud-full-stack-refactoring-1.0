@@ -20,6 +20,7 @@ const limit = 5;
 
 document.addEventListener('DOMContentLoaded', () => 
 {
+    console.log("Hola");
     initSelects();
     setupFormHandler();
     setupCancelHandler();
@@ -149,7 +150,7 @@ async function loadStudentsSubjets()
         const resPerPage = parseInt(document.getElementById('resultsPerPage').value, 10) || limit;
         const data = await studentsSubjectsAPI.fetchPaginated(currentPage, resPerPage);
         console.log(data);
-        renderStudentSubjectsTable(data.students_subjects);
+        renderRelationsTable(data.subjets);
         totalPages = Math.ceil(data.total / resPerPage);
         document.getElementById('pageInfo').textContent = `Página ${currentPage} de ${totalPages}`;
     } 
